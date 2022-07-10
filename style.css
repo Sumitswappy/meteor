@@ -1,0 +1,238 @@
+    
+* {
+    background-color: rgb(0, 0, 0);
+    margin: 0px;
+     
+}
+#menu{
+  display: flex;
+    background-color: rgba(249, 244, 244, 0.377);
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    border: 10px solid chartreuse;
+    border-radius: 20px;
+    position: sticky;
+    top: 0px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.h1{
+    padding: 10px;
+    background-color: rgba(249, 244, 244, 0);
+    color: rgb(44, 255, 2);
+font-family: 'Orbitron', sans-serif;
+}
+#opt{
+  display: flex;
+  background-color: rgba(249, 244, 244, 0);
+  align-items: center;
+}
+.a {
+  margin: 5px;
+    border: 3px solid chartreuse;
+    border-radius: 10px;
+    padding: 5px;
+    text-decoration: none;
+    color: chartreuse;
+    background-color: rgba(249, 244, 244, 0);
+    font-family: 'Baloo 2', cursive;
+    font-weight: bold;
+}
+.a1 {
+  display: flex;
+  margin: 5px;
+    border: 3px solid chartreuse;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0);
+    text-decoration: none;
+    color: chartreuse;
+    font-family: 'Baloo 2', cursive;
+    font-weight: bold;
+}
+.a1 p{
+  background-color: rgba(0, 0, 0, 0);
+}
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48;
+  padding: 0px;
+  position: relative;
+  top: 0px;
+  background-color: rgba(253, 3, 3, 0);
+}
+
+a:hover {
+    color: rgb(233, 61, 61);
+    background-color: aliceblue;
+    }
+ span:hover {
+color: rgb(233, 61, 61);
+background-color: aliceblue;
+}
+.home{
+  display: grid;
+  border: 3px solid chartreuse;
+  margin: 10px;
+}
+.bod{
+  padding-bottom: 40px;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    /*background-color: aqua;*/
+    display: flex;
+    justify-content: center;
+}
+.main1{
+    font-size: 300%;
+    font-weight: bold;
+    font-family: 'Permanent Marker', cursive;
+    font-style: normal;
+    padding-left: 60px;
+   /* background-color: yellow;*/
+    color: chartreuse;
+    text-align: left;
+    grid-column-start: 1; 
+    grid-column-end: 2;
+    padding-top: 40px;
+  padding-bottom: 40px;
+}
+#img {
+    margin-top: 30px;
+    border: 10px solid chartreuse;
+    border-radius: 250px;
+    padding: 5px;
+    height: 300px;
+    width: 300px;
+}
+#h6 {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 90px;
+  /*background-color: beige;*/
+    color: green;
+    text-align: left;
+    font-size: 200%;
+    font-weight: bold;
+    font-family: 'Patrick Hand', cursive;;
+    font-style: normal;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+.skills{
+  display: grid;
+  border: 3px solid chartreuse;
+  margin: 10px;
+ }
+.lang1{
+  padding: 20px;
+  text-align: center;
+  border: 3px solid chartreuse;
+  border-radius: 25px;
+  margin-left: 250px;
+  margin-right: 250px;
+  margin-bottom: 10px;
+}
+li {
+  color: green;
+  padding: 10px;
+  text-align: left;
+  font-size: large;
+  font-weight: bolder;
+
+}
+#s{
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.sk{
+  color: chartreuse;
+  padding: 10px;
+  font-size: 300%;
+    font-weight: bold;
+    font-family: 'DM Serif Display', serif;
+    font-style: normal;
+}
+.aboutme{
+  display: grid;
+  border: 3px solid chartreuse;
+  margin: 10px;
+  padding:0px
+}
+#s1{
+  padding-left:20px;
+  padding-right:20px;
+  padding-top:20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.word {
+  color: green;
+  padding: 40px;
+    text-align: center;
+    font-size: 100%;
+    font-weight: bold;
+    font-family: 'Patrick Hand', cursive;;
+    font-style: normal;
+}
+.ab{
+  color: chartreuse;
+  font-size: 290%;
+  font-family: 'Dancing Script', cursive;
+}
+#links{
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.a2 {
+  border: 3px solid chartreuse;
+  border-radius: 10px;
+  padding: 10px;
+  text-decoration: none;
+  color: chartreuse;
+  font-family: 'Baloo 2', cursive;
+  font-weight: bold;
+}
+.fa {
+    padding: 10px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 20px;
+    border-radius: 50%;
+  }
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+    
+  }
+  .fa-instagram {
+    background: #125688;
+    color: white;
+  }
+  .fa-linkedin {
+    background: #007bb5;
+    color: white;
+  }
+
+.facebook{
+  color: chartreuse;
+  align-self: center;
+}
