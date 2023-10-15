@@ -1,0 +1,321 @@
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" type="text/css" href="Styles.css">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+     <title>Sumit Sarkar Just Chill</title>
+     <style>
+        
+         .box {
+             background-image: url("https://images.pexels.com/photos/7130560/pexels-photo-7130560.jpeg?cs=srgb&dl=pexels-codioful-%28formerly-gradienta%29-7130560.jpg&fm=jpg");
+             background-repeat: no-repeat;
+             background-size: cover;
+             padding: 10px;
+         }
+         .slideshow-container {
+             position: relative;
+             max-width: 1200px;
+             margin: 20px auto;
+             align-self: center;
+         }
+         .mySlides {
+             display: none;
+             width: 100%;
+             height: 500px;
+             border: 3px Solid white;
+             border-radius: 15px;
+             box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+             
+         }
+ 
+         .mySlides img {
+             width: 100%;
+             height: 100%;
+             border: 3px none white;
+             border-radius: 15px;
+         }
+         .dot {
+           
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #ac1efffb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+            cursor: pointer;  
+        }
+
+        .active {
+            background-color: #d2a6f8;
+        }
+         
+         h2 {
+             text-align: center;
+             margin-top: 20px;
+             color: #000000;
+         }
+ 
+         .categories {
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            margin: 40px;
+           
+        }
+        .category-item {
+            text-align: center;
+            margin: 10px;
+        }
+        .category-item a{
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+            padding: 0 20px; 
+        }
+        .category-item a:hover{
+            color: #ff004c; 
+
+        } 
+        .category-item img {
+            
+            border: 3px none black;
+            border-radius: 35px;
+            width: 200px; 
+            height: 200px; 
+            transition: transform 0.3s; 
+        }
+        .category-item img:hover {
+            transform: scale(1.2); 
+        }
+        .category-name {
+            margin: 15px;
+            font-size: 20px;
+        }
+    .about-us {
+        background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAADNCAMAAAC8cX2UAAAAV1BMVEX/trL/tLX/waL/vaj/sLv/v6X/u6v/uK//vqb/vKn/ua7/srj/r7z/sbn/s7b/uqz/t7H/tbT/wKP/wKT/wqD/uq3/wqH/u6r/t7D/vqf/tbP/s7f/sbrgY5CCAAACqUlEQVR4nO3YiVLDMAyE4XIV2kKhHOV8/+dkkhRqhnEhISba9a830Gj9aazZfVfbpo6/1G1bd22dJXWxq+emTpJa7OuxrflHXXf10NZyX+dJPbV109UsrZemNm0dpbXu6rWpVVJXu3pr6jSpy8+aTdr2975/aHsj0Pa8bNvrsdrejtb2Ij/tZabtX4WcaY/X9njTPvC2/zRtSMu3vbIOOaQR8qik5dqejrR/CTmkQRqkQdpB0jxCDmmypPEViU/apCGvlDSbvV2YNK29DWlBpq0VckiradqQFmraXFcgzZ40lb3NdaVcyCHNjjT2dnWk9Qu5OWm5kEOadsghLfS0tULuQZrNVwTSII2vCKQZkaayt7WuKwHb5roCaZAGaUNJ8wg5pMmSxlckPmmThrxS0mz2dmHStPY2pAWZtlbIIa2maUNaqGlzXYE0e9JU9jbXlXIhhzQ70tjb1ZHWL+TmpOVCDmnaIYe00NPWCrkHaTZfEUiDNL4ikGZEmsre1rquBGyb6wqkQRqkDSXNI+SQJksaX5H4pE0a8kpJs9nbhUnT2tuQFmTaWiGHtJqmDWmhps11BdLsSVPZ21xXyoUc0uxIY29XR1q/kJuTlgs5pGmHHNJCT1sr5B6k2XxFIA3S+IpAmhFpKntb67oSsG2uK5AGaZA2lDSPkEOaLGl8ReKTNmnIKyXNZm8XJk1rb0NakGlrhRzSapo2pIWaNtcVSLMnTWVvc10pF3JIsyONvV0daf1Cbk5aLuSQph1ySAs9ba2Qe5Bm8xWBNEjjKwJpRqSp7G2t60rAtrmuQBqkQdpQ0jxCDmmypPEViU/apCGvlDSbvV2YNK29DWlBpq0VckiradqQFmraXFcgzZ40lb3NdaVcyCHNjjT2dnWk9Qu5OWm5kPPxLN/2Ow2bte1V0lMXAAAAAElFTkSuQmCC");
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 20px;
+        text-align: center;
+    }
+
+.about-us h2 {
+    color: #850033;
+    font-family: Permanent Marker;
+    font-size: xx-large;
+}
+
+.about-us p {
+    font-size: 18px;
+    color: #8d002f;
+    font-family: Permanent Marker;
+    margin: 10px 0;
+}
+.follow{
+    background-color: #8539dca7;
+    color: rgba(250, 1, 72, 0.788);
+    top: 0;
+  left: 0;
+  width: 100%;
+  padding-block: 10px;
+  font-family: Permanent Marker;
+}
+.follow h2{
+    color: #26005f;
+}
+#links{
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .fa {
+    padding: 10px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 20px;
+    border-radius: 50%;
+  }
+  .fa:hover{
+    background-color: rgba(90, 0, 154, 0.993);
+  }
+.fa-facebook {
+    background: hsl(221, 44%, 41%);
+    color: white;
+    
+  }
+  .fa-instagram {
+    background-image: url("https://static.vecteezy.com/system/resources/thumbnails/007/656/490/small/colorful-gradient-background-inspired-by-instagram-vector.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: white;
+  }
+  .facebook{
+  color:rgba(90, 0, 154, 0.993);
+  font-size: large;
+  align-self: center;
+}
+.facebook:hover {
+  color:  rgb(241, 223, 255); 
+  background-color: rgba(255, 255, 255, 0);
+}
+
+
+</style>
+ </head>
+ <body>
+     <header>
+         <img src="https://cdn-icons-png.flaticon.com/128/3285/3285584.png" alt="Logo">
+         <h1>JustChill</h1>
+     </header>
+    <div class="navbar">
+            <a href="Beer.html">Beer</a>
+            <a href="Whisky.html">Whiskey</a>
+            <a href="Rum.html">Rum</a> 
+            <a href="Vodka.html">Vodka</a>
+            <a href="Login.html">Login</a>
+            <div class="cart">
+                <a href="ViewCart.html">
+                    <img src="https://cdn-icons-png.flaticon.com/128/1170/1170678.png" class="cart-logo" alt="Cart">
+                    <div id="cart-counter" class="cart-counter">0</div>
+                </a>
+            </div>
+            
+            
+        </div>
+    </div>
+       <div class="nav-space"></div>  
+     </div>
+     <div class="box">
+         <div class="slideshow-container">
+             <div class="mySlides">
+                 <img src="https://image.adsoftheworld.com/qjr1b343xlvxkh8o14p97141uqxb" alt="Image 1">
+             </div>
+             <div class="mySlides">
+                 <img src="https://www.thedrinksreport.com/media/news/2013/15176-c1.jpg" alt="Image 2">
+             </div>
+             <div class="mySlides">
+                 <img src="https://i.pinimg.com/736x/65/c4/a5/65c4a522f3a9d90fa54b40771bb41317.jpg" alt="Image 3">
+             </div>
+             <div class="mySlides">
+                 <img src="https://marketingtherainbow.info/____impro/1/Case%20studies/1.%20fmcg/Smirnoff/19%20fun%202.png?etag=%22de2ca-5fd2a973%22&sourceContentType=image%2Fpng" alt="Image 4">
+             </div>
+             <div class="mySlides">
+                 <img src="https://i.ytimg.com/vi/kJIzX42BC0c/sddefault.jpg" alt="Image 5">
+             </div>
+             <div class="mySlides">
+                 <img src="https://www.thespiritsbusiness.com/content/uploads/2020/10/Jack-Daniels-Make-it-Count.jpg" alt="Image 6">
+             </div>
+             <br>
+             <div style="text-align:center">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+             
+         </div>
+     </div>
+     <div class="categories">
+        <div class="category-item">
+            <a href="Beer.html">
+                <img src="https://storage.gotoliquorstore.com/category/7cf6f894-abad-46aa-bc8c-2c494faa6daf.jpg" alt="Beer">
+            </a>
+            
+            <div class="category-name"><a href="Beer.html">Beer</a></div>
+        </div>
+        <div class="category-item">
+            <a href="Whisky.html">
+                <img src="https://storage.gotoliquorstore.com/category/e4279320-0fc1-4293-b036-d4e4db26dbca.jpg" alt="Whisky">
+            </a>
+            
+            <div class="category-name"><a href="Whisky.html">Whiskey</a></div>
+        </div>
+        <div class="category-item">
+            <a href="Rum.html"><img src="https://storage.gotoliquorstore.com/category/a843a16b-9a7d-49f4-a066-311beff22dc0.jpg" alt="Rum"></a>   
+            <div class="category-name"><a href="Rum.html">Rum</a></div>
+        </div>
+        <div class="category-item">
+            <a href="Vodka.html"><img src="https://storage.gotoliquorstore.com/category/4206befa-27ba-4b61-869d-403d931d4838.jpg" alt="Vodka"></a>
+            <div class="category-name"><a href="Vodka.html">Vodka</a></div>
+        </div>
+    </div>
+    <section class="about-us">
+        <h2>About Us</h2>
+        <p>Welcome to JustChill, your one-stop destination for the finest liquor selections. We are passionate about providing high-quality drinks to our customers and ensuring a memorable experience. Our dedicated team works tirelessly to bring you the best spirits from around the world.</p>
+        <p>At JustChill, we value quality, variety, and exceptional customer service. Whether you're looking for the perfect bottle of whiskey, the smoothest rum, or the crispiest beer, we've got you covered.</p>
+        <p>Our commitment to responsible drinking and top-notch products is what sets us apart. Explore our wide range of collections and enjoy the convenience of shopping with us. Cheers to great moments!</p>
+    </section>
+    <section class="follow">
+        <h2><center>Follow Us</center></h2>
+        <nav id="links">
+            <a href="" target="_blank" rel="noopener noreferrer" class="fa fa-facebook"></a><p class="facebook">facebook</p>
+            <a href="" target="_blank" rel="noopener noreferrer" class="fa fa-instagram"></a><p class="facebook">Instagram</p>
+        </nav>
+    </section>
+     <footer>
+         &copy; 2023 JustChill | <a href="Aboutus.html">About Us</a> | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+     </footer>
+     <script>
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+function updateCartCounter() {
+    const cartCounter = document.getElementById('cart-counter');
+    if (cartCounter) {
+        cartCounter.textContent = cart.length;
+    }
+}
+
+updateCartCounter();
+
+
+        var slideIndex = 0;
+        showSlides();
+    
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+    
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+    
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+    
+            for (i = 0; i < dots.length; i++) {
+                dots[i].classList.remove("active");
+            }
+    
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].classList.add("active");
+    
+            setTimeout(showSlides, 4000);
+        }
+        
+    </script>
+    
+ </body>
+ </html>
+ 
+ 
+ 
+ 
+

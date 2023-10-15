@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="Styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <title>Sumit Sarkar Vodka Page</title>
+    <style>
+       
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px;
+        }
+
+        .product {
+            border: 1px none black;
+            border-radius: 5px;
+            background-color: #fff;
+            padding: 10px;
+            text-align: center;
+            transition: transform 0.3s; 
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .product:hover {
+            transform: scale(1.05); 
+        }
+
+        .product img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid rgb(71, 0, 107);
+            border-radius: 5px;
+        }
+
+        .product label {
+            font-weight: bold;
+        }
+
+        .btn1 {
+            font-size: 18px;
+            background-color: #9401fd;
+            color: rgb(255, 255, 255);
+            padding: 5px 15px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .btn1:hover {
+            background-color: #4b0081;
+        }
+        #cart {
+            margin: 0 auto;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://cdn-icons-png.flaticon.com/128/3285/3285584.png" alt="Logo">
+        <h1>JustChill</h1>
+    </header>
+    <div class="navbar">
+        <a href="Home.html">Home</a>
+        <a href="Beer.html">Beer</a>
+        <a href="Rum.html">Rum</a>
+        <a href="Whisky.html">Whiskey</a>
+        <a href="Vodka.html">Vodka</a>
+        
+        <a href="Login.html">Login</a>
+        <div class="cart">
+            <a href="ViewCart.html">
+                <img src="https://cdn-icons-png.flaticon.com/128/1170/1170678.png" class="cart-logo" alt="Cart">
+                <div id="cart-counter" class="cart-counter">0</div>
+            </a>
+        </div>
+        
+    </div>
+     <div class="nav-space"></div>
+    <div class="container">
+        <div class="product">
+            <img src="https://images.gotoliquorstore.com/product/1000002558/d97920a4-5315-47d5-bf1c-1a4e6d3f16ad_360_m.jpg" alt="Smirnoff No.21">
+            <label for="Smirnoff No.21">Smirnoff No.21</label><br>
+            <label for="Price">Rs 14000.00</label><br>
+            <button class="btn1" onclick="addToCart('Smirnoff No.21', 14000.00, 'https://images.gotoliquorstore.com/product/1000002558/d97920a4-5315-47d5-bf1c-1a4e6d3f16ad_360_m.jpg')">Add +</button>
+        </div>
+        <div class="product">
+            <img src="https://images.gotoliquorstore.com/product/1000001495/22af298b-c867-41c4-8cc3-2bee562385b7_360_m.jpg" for="image" alt="KingFisher Ultra">
+            <label for="Absolut Vodka">Absolut Vodka</label><br>
+            <label for="Price">Rs 10000.00</label><br>
+            <button class="btn1" onclick="addToCart('Absolut Vodka', 10000.00, 'https://images.gotoliquorstore.com/product/1000001495/22af298b-c867-41c4-8cc3-2bee562385b7_360_m.jpg')">Add +</button>
+        </div>
+        <div class="product">
+            <img src="https://images.gotoliquorstore.com/product/1000001860/3147b39b-2b5e-4dd6-adb6-d50cc46af292_360_m.jpg" for="image" alt="Heineken">
+            <label for="Svedka Vodka">Svedka Vodka</label><br>
+            <label for="Price">Rs 15000.00</label><br>
+            <button class="btn1" onclick="addToCart('Svedka Vodka', 15000.00, 'https://images.gotoliquorstore.com/product/1000001860/3147b39b-2b5e-4dd6-adb6-d50cc46af292_360_m.jpg')">Add +</button>
+        </div>
+        <div class="product">
+            <img src="https://images.gotoliquorstore.com/product/1000009295/3b62c6a5-5f9c-48c5-abb1-2771f85b3e7e_360_m.jpg" alt="New Amsterdam Pink Whitney Vodka">
+            <label for="Budweiser">New Amsterdam Pink Whitney Vodka</label><br>
+            <label for="Price">Rs 13500.00</label><br>
+            <button class="btn1" onclick="addToCart('New Amsterdam Pink Whitney Vodka', 13500.00, 'https://images.gotoliquorstore.com/product/1000009295/3b62c6a5-5f9c-48c5-abb1-2771f85b3e7e_360_m.jpg')">Add +</button>
+        </div>
+        <div class="product">
+            <img src="https://images.gotoliquorstore.com/product/1000001575/4c61220f-61ac-499b-8e62-a9ffa6764cec_360_m.jpg" alt="Ciroc Vodka">
+            <label for="Budweiser">Ciroc Vodka</label><br>
+            <label for="Price">Rs 12500.00</label><br>
+            <button class="btn1" onclick="addToCart('Ciroc Vodka', 12500.00, 'https://images.gotoliquorstore.com/product/1000001575/4c61220f-61ac-499b-8e62-a9ffa6764cec_360_m.jpg')">Add +</button>
+        </div>
+        <div class="product">
+            <img src="https://images.gotoliquorstore.com/product/1000002558/d97920a4-5315-47d5-bf1c-1a4e6d3f16ad_360_m.jpg" alt="Smirnoff No.21">
+            <label for="Smirnoff No.21">Smirnoff No.21</label><br>
+            <label for="Price">Rs 14000.00</label><br>
+            <button class="btn1" onclick="addToCart('Smirnoff No.21', 14000.00, 'https://images.gotoliquorstore.com/product/1000002558/d97920a4-5315-47d5-bf1c-1a4e6d3f16ad_360_m.jpg')">Add +</button>
+        </div>
+        <div class="product">
+            <img src="https://images.gotoliquorstore.com/product/1000001495/22af298b-c867-41c4-8cc3-2bee562385b7_360_m.jpg" for="image" alt="KingFisher Ultra">
+            <label for="Absolut Vodka">Absolut Vodka</label><br>
+            <label for="Price">Rs 10000.00</label><br>
+            <button class="btn1" onclick="addToCart('Absolut Vodka', 10000.00, 'https://images.gotoliquorstore.com/product/1000001495/22af298b-c867-41c4-8cc3-2bee562385b7_360_m.jpg')">Add +</button>
+        </div>
+        <div class="product">
+            <img src="https://images.gotoliquorstore.com/product/1000001860/3147b39b-2b5e-4dd6-adb6-d50cc46af292_360_m.jpg" for="image" alt="Heineken">
+            <label for="Svedka Vodka">Svedka Vodka</label><br>
+            <label for="Price">Rs 15000.00</label><br>
+            <button class="btn1" onclick="addToCart('Svedka Vodka', 15000.00, 'https://images.gotoliquorstore.com/product/1000001860/3147b39b-2b5e-4dd6-adb6-d50cc46af292_360_m.jpg')">Add +</button>
+        </div>
+        <div class="product">
+            <img src="https://images.gotoliquorstore.com/product/1000009295/3b62c6a5-5f9c-48c5-abb1-2771f85b3e7e_360_m.jpg" alt="New Amsterdam Pink Whitney Vodka">
+            <label for="Budweiser">New Amsterdam Pink Whitney Vodka</label><br>
+            <label for="Price">Rs 13500.00</label><br>
+            <button class="btn1" onclick="addToCart('New Amsterdam Pink Whitney Vodka', 13500.00, 'https://images.gotoliquorstore.com/product/1000009295/3b62c6a5-5f9c-48c5-abb1-2771f85b3e7e_360_m.jpg')">Add +</button>
+        </div>
+        <div class="product">
+            <img src="https://images.gotoliquorstore.com/product/1000001575/4c61220f-61ac-499b-8e62-a9ffa6764cec_360_m.jpg" alt="Ciroc Vodka">
+            <label for="Budweiser">Ciroc Vodka</label><br>
+            <label for="Price">Rs 12500.00</label><br>
+            <button class="btn1" onclick="addToCart('Ciroc Vodka', 12500.00, 'https://images.gotoliquorstore.com/product/1000001575/4c61220f-61ac-499b-8e62-a9ffa6764cec_360_m.jpg')">Add +</button>
+        </div>
+    </div>
+
+    <div id="cart">
+        
+    </div>
+    <footer>
+        &copy; 2023 JustChill | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+    </footer>
+    <script>
+        
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+function updateCartCounter() {
+    const cartCounter = document.getElementById('cart-counter');
+    if (cartCounter) {
+        cartCounter.textContent = cart.length;
+    }
+}
+updateCartCounter();
+        function addToCart(productName, price, image) {
+            
+            cart.push({ name: productName, price: price, image: image });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            updateCartCounter();
+        }
+        
+    </script>
+</body>
+</html>

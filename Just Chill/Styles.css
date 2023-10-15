@@ -1,0 +1,107 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #fff;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-image: url("https://img.freepik.com/free-photo/abstract-textured-backgound_1258-30633.jpg");
+    background-repeat: repeat;
+    background-size: contain;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1 {
+    font-family: Lobster;
+    font-size: 44px;
+}
+
+header img {
+    margin-right: 10px;
+    width: 70px;
+    height: 70px;
+}
+
+.navbar {
+    position: fixed;
+    top: 120px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-color: #f1d2e0;
+    color: rgb(0, 0, 0);
+    font-size: large;
+    text-align: center;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-space {
+    width: 100%;
+    height: 175px;
+}
+
+.navbar a {
+    align-self: center;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    padding: 0 20px;
+    font-size: 20px;
+}
+
+.navbar a:hover {
+    color: #ff00e6;
+}
+
+.navbar .cart-logo {
+    width: 30px;
+    height: 30px;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+.navbar .cart {
+    display: flex;
+    align-items: center;
+    position: relative;
+    display: inline-block;
+}
+.cart-counter {
+    position: absolute;
+    top: 8px;
+    right: 5px;
+    color: rgb(15, 0, 30);
+    padding: 3px 6px;
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+footer {
+    text-align: center;
+    background-color: #3f3f3f;
+    color: white;
+    padding: 10px 0;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    padding: 0 20px;
+}

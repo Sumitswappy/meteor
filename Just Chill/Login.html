@@ -1,0 +1,173 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="Styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <title>Sumit Sarkar Login Page</title>
+    <style>
+        .nav-space{
+            width: 100%;
+            height: 130px;
+        }
+        .box{
+            background-image: url("https://www.pngguru.in/storage/uploads/images/Gradient%20rainbow%20background%20-%20Download%20on%20pngguru_1672143898_1352693178.webp");
+           background-repeat: no-repeat;
+           background-size: cover;
+           padding: 30px;
+        }
+        .container {
+            max-width: 600px;
+            max-height: 600px;
+            margin: 85px auto;
+            padding: 20px;
+            background-color: rgba(237, 158, 255, 0.512);
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.442);
+        }
+        h1{
+            color: #ffffff;
+            text-align: center;
+           
+        }
+        .container h1 {
+            color: #5d025f;
+            text-align: center;
+            font-size: 36px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+            color: rgb(118, 0, 0);
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #5d025f;
+            
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 75%;
+            padding: 10px;
+            border: 1px solid #d72af9;
+            border-radius: 5px;
+        }
+
+        .forgot-password {
+            text-align: right;
+        }
+
+        .forgot-password a {
+            text-decoration: none;
+            color: #5d025f;
+        }
+
+        .forgot-password a:hover {
+            text-decoration: underline;
+        }
+
+        .btn-container {
+            text-align: center;
+        }
+
+        #btn {
+            font-size: 15px;
+            background-color: #a839b2;
+            color: white;
+            padding: 10px 20px;
+            border: 1px none #a839b2;
+            border-radius: 11px;
+            cursor: pointer;
+        }
+
+        #btn:hover {
+            background-color: #f108fd;
+        }
+
+        .create-account {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .create-account a {
+            text-decoration: none;
+            color: #5d025f;
+        }
+
+        .create-account a:hover {
+            text-decoration: underline;
+        }
+        .form{
+            color: #ffffff;
+        }
+    </style>
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://cdn-icons-png.flaticon.com/128/3285/3285584.png" width="70" height="70">
+        <h1>JustChill</h1>
+    </header>
+    <div class="nav-space"></div>
+    <div class="box">
+        <div class="container">
+            <h1>Login</h1>
+            <form id="loginForm">
+                <div class="form">
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" name="email">
+                </div><br>
+                <div class="form">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password">
+                </div>
+                <br>
+                <div class="forgot-password">
+                    <a href="forget.html">Forgot your password?</a>
+                </div>
+                <div class="btn-container">
+                    <button id="btn" formaction="home.html">Sign In</button>
+                </div>
+                <div class="create-account">
+                    <a href="create.html">Create Account</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <footer>
+        &copy; 2023 JustChill | <a href="Aboutus.html">About Us</a> | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+    </footer>
+
+    <script>
+        const form = document.getElementById("loginForm");
+        const emailInput = document.getElementById("email");
+        const passwordInput = document.getElementById("password");
+
+        form.addEventListener("submit", function (event) {
+            if (!isValidEmail(emailInput.value)) {
+                alert("Please enter a valid email address.");
+                event.preventDefault();
+            }
+            if (!isValidPassword(passwordInput.value)) {
+                alert("Password must be at least 6 characters long.");
+                event.preventDefault();
+            }
+        });
+
+        function isValidEmail(email) {
+            const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+            return emailPattern.test(email);
+        }
+
+        function isValidPassword(password) {
+            return password.length >= 6;
+        }
+    </script>
+</body>
+</html>
